@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support</title>
+    <link rel="stylesheet" href="../css/support.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Support Center</h1>
+      <p>We're here to help. Reach out to us or explore our resources below.</p>
+    </header>
+
+    <section class="support-section">
+      <div class="contact-options">
+        <h2>Get in Touch</h2>
+        <p>
+          For any inquiries, please use the contact form or get in touch with us
+          via:
+        </p>
+        <ul>
+          <li>
+            <strong>Email:</strong>
+            <a href="mailto:support@yourcompany.com">support@yourcompany.com</a>
+          </li>
+          <li><strong>Phone:</strong> +1 234-567-890</li>
+          <li><strong>Live Chat:</strong> Available from 9 AM to 6 PM (GMT)</li>
+        </ul>
+      </div>
+
+      <div class="form-container">
+        <h2>Submit a Support Request</h2>
+        <form action="support.php" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number (Optional):</label>
+            <input type="text" id="phone" name="phone" />
+          </div>
+          <div class="form-group">
+            <label for="issue">Issue/Request:</label>
+            <textarea
+              id="issue"
+              name="issue"
+              placeholder="Describe your issue or request"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Submit Request</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="resources">
+      <h2>Helpful Resources</h2>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">User Guide</a></li>
+        <li><a href="#">Billing & Payments</a></li>
+        <li><a href="#">Technical Support</a></li>
+        <li><a href="#">Community Forums</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

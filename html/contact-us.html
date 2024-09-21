@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Expense Tracker</title>
+    <link rel="stylesheet" href="../css/contact-us.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="company-info">
+        <h1>Expense Tracker</h1>
+        <p>Master your money, one step at a time.</p>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="income.html">Income</a></li>
+          <li><a href="expense.html">Expense</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="contact-info-section">
+        <h2>Contact Us</h2>
+        <p>
+          We'd love to hear from you. Reach out to us via email, phone, or
+          follow us on social media.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <p>Phone: +1 (234) 567-8900</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <p>Email: support@expensetracker.com</p>
+          </div>
+          <div class="contact-item social-media">
+            <p>Follow us on:</p>
+            <a href="https://facebook.com" target="_blank" class="social-icon"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="callback-section">
+        <h3>Request a Callback</h3>
+        <form id="callbackForm" action="send_callback.php" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
+          <button type="submit">Request Callback</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Expense Tracker. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <!-- signup page code -->
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="../php/userauthenticate.php" method="POST">
+          <h1>Create Account</h1>
+
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name="email" placeholder="Email" />
+          <input
+            type="password"
+            name="password"
+            id="signup-password"
+            placeholder="Password"
+          />
+          <img
+            class="toggle-icon"
+            id="toggleSignupPassword"
+            src="../images/hide.png"
+            alt="Show/Hide Password"
+          />
+          <button type="submit" name="signUp">Sign Up</button>
+        </form>
+      </div>
+      <!-- login page code  -->
+      <div class="form-container sign-in-container">
+        <form action="../php/userauthenticate.php" method="POST">
+          <h1>Login</h1>
+          <!-- Error message container -->
+
+          <div id="email-error" style="color: red"></div>
+          <input type="email" name="email" placeholder="Email" />
+          <input
+            type="password"
+            name="password"
+            id="login-password"
+            placeholder="Password"
+          />
+          <img
+            class="toggle-icon"
+            id="toggleLoginPassword"
+            src="../images/hide.png"
+            alt="Show/Hide Password"
+          />
+
+          <a href="../html/orget_password.html">Forgot your password?</a>
+          <button type="submit" name="login">Login</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signIn">Login</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Welcome back</h1>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Function to get URL query parameters
+      function getQueryParams() {
+        const params = {};
+        const queryString = window.location.search;
+        if (queryString) {
+          const pairs = queryString.substring(1).split("&");
+          for (let i = 0; i < pairs.length; i++) {
+            const pair = pairs[i].split("=");
+            params[decodeURIComponent(pair[0])] = decodeURIComponent(
+              pair[1] || ""
+            );
+          }
+        }
+        return params;
+      }
+
+      // Display error message if present in URL query
+      const queryParams = getQueryParams();
+      if (queryParams.error) {
+        document.getElementById("email-error").textContent =
+          queryParams.error.replace(/\+/g, " ");
+      }
+      // wrong password
+    </script>
+    <script>
+      // Function to get URL query parameters
+      function getQueryParams() {
+        const params = {};
+        const queryString = window.location.search;
+        if (queryString) {
+          const pairs = queryString.substring(1).split("&");
+          for (let i = 0; i < pairs.length; i++) {
+            const pair = pairs[i].split("=");
+            params[decodeURIComponent(pair[0])] = decodeURIComponent(
+              pair[1] || ""
+            );
+          }
+        }
+        return params;
+      }
+
+      // Display error message if present in URL query
+      const queryParamsq = getQueryParams();
+      if (queryParams.error) {
+        document.getElementById("email-error").textContent =
+          queryParams.error.replace(/\+/g, " ");
+      }
+      // Password toggle for signup form
+      const signupPasswordInput = document.getElementById("signup-password");
+      const toggleSignupPassword = document.getElementById(
+        "toggleSignupPassword"
+      );
+
+      toggleSignupPassword.addEventListener("click", function () {
+        const type =
+          signupPasswordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        signupPasswordInput.setAttribute("type", type);
+
+        // Toggle the image between eye-open and eye-close
+        this.src =
+          type === "password" ? "../images/hide.png" : "../images/show.png";
+      });
+
+      // Password toggle for login form
+      const loginPasswordInput = document.getElementById("login-password");
+      const toggleLoginPassword = document.getElementById(
+        "toggleLoginPassword"
+      );
+
+      toggleLoginPassword.addEventListener("click", function () {
+        const type =
+          loginPasswordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        loginPasswordInput.setAttribute("type", type);
+
+        // Toggle the image between eye-open and eye-close
+        this.src =
+          type === "password" ? "../images/hide.png" : "../images/show.png";
+      });
+    </script>
+
+    <script src="../javascript/scipt.js"></script>
+  </body>
+</html>

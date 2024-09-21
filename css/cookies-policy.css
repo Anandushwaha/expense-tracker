@@ -1,0 +1,114 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #00499c;
+    color: white;
+    padding: 20px;
+}
+
+.company-info h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.company-info p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+}
+
+.navbar {
+    margin-top: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #003773;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cookies-policy h2, .privacy-policy h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.cookies-policy p, .privacy-policy p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.cookies-policy ul, .privacy-policy ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.cookies-policy h3, .privacy-policy h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.cookie-action-buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.cookie-action-buttons button {
+    padding: 10px 20px;
+    margin-right: 15px;
+    background-color: #00499c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cookie-action-buttons button:hover {
+    background-color: #003773;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00499c;
+    color: white;
+    font-size: 14px;
+}

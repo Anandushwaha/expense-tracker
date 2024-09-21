@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense - Expense Tracker</title>
+    <link rel="stylesheet" href="../css/expense.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="company-info">
+        <h1>Expense Tracker</h1>
+        <p>Master your money, one expense at a time.</p>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="income.html">Income</a></li>
+          <li><a href="expense.html">Expense</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="filter-section">
+        <h2>View Expense Records</h2>
+        <p>Showing expense data from the last month by default.</p>
+
+        <form class="date-filter-form" method="GET" action="expense.php">
+          <div class="form-group">
+            <label for="start-date">From Date:</label>
+            <input type="date" id="start-date" name="start_date" required />
+          </div>
+          <div class="form-group">
+            <label for="end-date">To Date:</label>
+            <input type="date" id="end-date" name="end_date" required />
+          </div>
+          <button type="submit">Filter</button>
+        </form>
+      </section>
+
+      <section class="expense-table-section">
+        <h3>Expense Records</h3>
+        <table class="expense-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Category</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Sample data (this will be dynamically generated) -->
+            <tr>
+              <td>2024-08-10</td>
+              <td>$100</td>
+              <td>Groceries</td>
+              <td>Supermarket</td>
+            </tr>
+            <tr>
+              <td>2024-08-12</td>
+              <td>$50</td>
+              <td>Transportation</td>
+              <td>Bus fare</td>
+            </tr>
+            <!-- More data from the database -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Expense Tracker. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

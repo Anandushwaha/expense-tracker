@@ -1,0 +1,132 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #00499c;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Support Section */
+.support-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.contact-options, .form-container {
+    width: 45%;
+}
+
+.contact-options ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-options li {
+    margin-bottom: 10px;
+}
+
+.contact-options a {
+    color: #00499c;
+    text-decoration: none;
+}
+
+.contact-options a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styling */
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00499c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #003773;
+}
+
+/* Resources Section */
+.resources {
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+.resources a {
+    color: #00499c;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.resources a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00499c;
+    color: white;
+}

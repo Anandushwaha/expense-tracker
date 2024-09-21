@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <h1>AP Spend.ly</h1>
+        <p>Take control of your financial journey</p>
+      </div>
+      <div class="user-profile">
+        <img
+          src="https://via.placeholder.com/50"
+          alt="Customer Photo"
+          class="user-photo"
+        />
+        <div class="header-right">
+            <div class="user-info" id="user-info">
+              <h2 id="user-name" class="uname">Loading user info...</h2>
+              <h4 id="user-email" class="uid"></h4>
+            </div>
+      </div>
+    </header>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="income.html">Income</a></li>
+        <li><a href="expense.html">Expense</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Goals</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="login.html">Log in</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="totals">
+        <div class="total-box income-box">
+          <h3>Total Income</h3>
+          <p id="totalIncome"></p>
+        </div>
+        <div class="total-box expense-box">
+          <h3>Total Expenses</h3>
+          <p id="totalExpenses"></p>
+        </div>
+        <div class="total-box balance-box">
+          <h3>Total Balance</h3>
+          <p id="totalBalance"></p>
+        </div>
+        
+      </section>
+      
+     
+      <section class="entry-section">
+        <div class="entry-form">
+          <h3>Add Income or Expense</h3>
+          <form id="transaction-form">
+            <div class="form-group">
+              <label for="type">Type:</label>
+              <select id="type" name="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="amount">Amount:</label>
+              <input type="number" id="amount" name="amount" placeholder="Enter amount" required />
+            </div>
+            <div class="form-group">
+              <label for="category">Category:</label>
+              <select id="category" name="category">
+                <option value="groceries">Groceries</option>
+                <option value="transportation">Transportation</option>
+                <option value="rent">Rent</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="description">Description:</label>
+              <input type="text" id="description" name="description" placeholder="Add description" required />
+            </div>
+            <div class="form-group">
+              <button type="submit">Add Transaction</button>
+            </div>
+          </form>
+        </div>
+      
+        <div class="entry-list">
+          <h3>Entries</h3>
+          <ul id="entryList">
+            <!-- Entries will be dynamically added here -->
+          </ul>
+          
+        </div>
+      </section>
+      
+
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+    
+
+    <script src="../javascript/dashboard.js"></script>
+  </body>
+</html>
+
+
